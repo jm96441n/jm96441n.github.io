@@ -1,0 +1,44 @@
+header {
+	text-align: center;
+	font-size: 3em;
+	font-family: Signika;
+}
+
+aside {
+	float: left;
+	width: 10%;
+	margin-top: 5em;
+	position: fixed;
+}
+
+.links {
+	border: 1px solid black;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	background-color: #7BDAC8;
+	font-family: Abel;
+}
+
+
+article {
+	float: right;
+	width: 85%;
+	padding-right: 2em;
+	font-family: Maven Pro;
+}
+
+article section {
+	text-align: center;
+	margin-right: 9em;
+	font-size: 1.5em;
+	font-family: Signika;
+}
+
+.question {
+	font-weight: bolder;
+}
+
+img{
+	width: 15em;
+	height: 10em;
+}
