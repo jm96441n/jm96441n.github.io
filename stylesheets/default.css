@@ -50,9 +50,10 @@ section div p {
 }
 
 footer {
-	clear: both;
-	position: absolute;
+	display: inline-block;
 	bottom: 0px;
 	font-size:0.75em;
+	width:100%;
+	clear: both;
 
 }
