@@ -26,6 +26,11 @@ nav {
 	font-family: Josefin Slab;
 }
 
+.nav_bar:hover {
+	background-color: white;
+	color: black;
+}
+
 .nav_bar {
 	padding: 0.5em 3em;
 	display: inline-block;
@@ -33,6 +38,7 @@ nav {
 	border: 1px solid black;
 	background-color: #7BDAC8;
 	color: gray;
+
 }
 
 section div h3 {
