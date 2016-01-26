@@ -15,7 +15,7 @@ aside {
 	border: 1px solid black;
 	padding-bottom: 0.5em;
 	padding-top: 0.5em;
-	background-color: #7BDAC8;
+	background-color: #D8FFFF;
 	font-family: Abel;
 }
 
@@ -25,17 +25,35 @@ article {
 	width: 85%;
 	padding-right: 2em;
 	font-family: Maven Pro;
+	
 }
 
+article p{
+	background-color: #D8FFFF;
+	width: 100%;
+	padding: 1em;
+	border: 1px solid black;
+
+}
+
+p span {
+	display: block;
+	margin: 0.5em;
+}
 article section {
+	width: 100%;
 	text-align: center;
 	margin-right: 9em;
 	font-size: 1.5em;
 	font-family: Signika;
+
 }
 
-code {
+pre {
 	font-weight: bold;
+	border:1px solid red;
+	background-color: white;
+	padding:0.5em;
 }
 
 .question {

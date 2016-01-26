@@ -8,17 +8,16 @@
 
 </head>
 	<body>
-		  <div id="headshot">
+		<div id="headshot">
                 <img src="imgs/photo baby.jpg" alt="photo of me">
-             	</div>
+        </div>
 		<header>
              	<div>
              	<h1> John Maguire</h1>
              	</div>
          </header>
-
+        
          <nav>
-         	
              	<a href="jm96441n.github.io/index.html"><div class="nav_bar">
              		 Home 
              	</div></a>
@@ -31,17 +30,42 @@
              	<a href="PastProjectsLink"><div class="nav_bar">
              		Past Projects
              	</div></a>
-             	<a href="blog/blog-index.html"><div class="nav_bar">
-             		Blog
-             	</div></a>
+             	<div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Blog<span class="arrow">&#9660;</span></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="http://jm96441n.github.io/blog/git.html">Git</a>
+                        <a href="http://jm96441n.github.io/blog/css-concepts.html">CSS Concepts</a>
+                        <a href="http://jm96441n.github.io/blog/array-hashes.html">Arrays and Hashes</a>
+                    </div>
+                </div>
+
              	
              	<a href="ResumeLink"><div class="nav_bar">
              		Resume
-             	</div></a>
 
-         	</nav>
-  
-         
+             	</div></a>
+            
+         </nav>
+        <script>
+        function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+         </script>
          <section>
 
          	<div>
