@@ -105,8 +105,9 @@ section div h4 {
 
 .g-recaptcha {
 	text-align: center;
-	width: 50%;
-	margin-right: 25%;
+	display: inline-block;
+	position: relative;
+	margin-top: 1.5em;
 }
 
 section div p {
