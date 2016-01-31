@@ -19,7 +19,11 @@ aside {
 	font-family: Abel;
 }
 
-
+.methodname {
+	display: inline;
+	color: red;
+	font-weight: bold;
+}
 article {
 	float: right;
 	width: 85%;
