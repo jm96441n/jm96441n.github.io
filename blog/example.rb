@@ -1,24 +1,38 @@
-class Mathematics
-  attr_reader :first_word
-  attr_accessor :first_number, :second_number
-  def initialize
-    @first_word = 'Hello'
+class All_about_you
+  def initialize 
+    @name = 'John'
+    @age = 27
+    @city = 'Brooklyn'
+    @fav_food = 'pizza'
   end
-  def greet(name)
-    return "#{@first_word} #{name}! How are you today? Call the sum or subtract method with the two numbers you with to perform the operations on"
+  def name
+    @name
   end
-  def sum(a,b)
-    @first_number = a
-    @second_number = b
-    return a+b
+  def age
+    @age
   end
-  def subtract(a,b)
-    @first_number = a
-    @second_number = b
-    return a-b
+  def age_change(new_age)
+    @age = new_age
+  end
+  def city
+    @city
+  end
+  def city_change(new_city)
+    @city = new_city
+  end
+  def fav_food
+    @fav_food
+  end
+  def change_food(new_fav)
+    @fav_food = new_fav
   end
 end
-    example = Mathematics.new
-    p example.greet('John')
-    p example.sum(6,2)
-    p example.subtract(6,2)
+
+example = All_about_you.new 
+p example.name
+p example.age
+p example.age_change(28)
+p example.city
+p example.city_change('Manhattan')
+p example.fav_food
+p example.change_food('Sushi')
