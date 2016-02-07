@@ -26,14 +26,14 @@ aside {
 }
 article {
 	float: right;
-	width: 85%;
-	padding-right: 2em;
+	width: 60%;
+	padding-right: 17em;
 	font-family: Maven Pro;
 	
 }
 
 article p{
-	background-color: #D8FFFF;
+	background-color: rgba(216, 255, 255, 0.55);
 	width: 100%;
 	padding: 1em;
 	border: 1px solid black;
