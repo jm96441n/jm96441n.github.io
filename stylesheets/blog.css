@@ -53,12 +53,16 @@ article section {
 
 }
 
-pre {
+.code {
+	white-space:pre-wrap;
+	text-align: left;
 	font-weight: bold;
 	border:1px solid red;
 	background-color: white;
 	padding:0.5em;
 }
+
+
 
 .question {
 	font-weight: bolder;
