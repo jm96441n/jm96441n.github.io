@@ -60,66 +60,95 @@
     <section>
       <h2> Ruby Classes </h2>
     </section>
-    <p>Today we will be discussing Ruby Classes. A class is an object in Ruby which allows us to store and define methods that we can re-use without having to redefine each method. Now, that sounds much more intricate and difficult than it actually is. The easiest way to show you this is with a simple example. Let's make a class called Mathematics that will first greet the user by name and give them instructions, and then will allow them to perform different functions on the numbers your give. So this is what our class will look like (we'll break it down afterwards):
+    <p>Today we will be discussing Ruby Classes. A class is an object in Ruby which allows us to store and define methods that we can re-use without having to redefine each method. Now, that sounds much more intricate and difficult than it actually is. The easiest way to show you this is with a simple, real-world example. Let's write a class that will store your name, age, favorite food, and city you currently live. that we can show on command, but we can change if we need to.
     </p>
     <p class="code"><code>
-class Mathematics
-  attr_reader :first_word
-  attr_accessor :first_number, :second_number
-  def initialize
-    @first_word = 'Hello'
+class All_about_you
+  def initialize 
+    @name = 'John'
+    @age = 27
+    @city = 'Brooklyn'
+    @fav_food = 'Pizza'
   end
-  def greet(name)
-    return "#{@first_word} #{name}! How are you today? Call the sum or subtract method with the two numbers you with to perform the operations on"
+  def name
+    @name
   end
-  def sum(a,b)
-    @first_number = a
-    @second_number = b
-    return a+b
+  def age
+    @age
   end
-  def subtract(a,b)
-    @first_number = a
-    @second_number = b
-    return a-b
+  def age_change(new_age)
+    @age = new_age
   end
-end
-    </code></p>
+  def city
+    @city
+  end
+  def city_change(new_city)
+    @city = new_city
+  end
+  def fav_food
+    @fav_food
+  end
+  def change_food(new_fav)
+    @fav_food = new_fav
+  end
+end    </code></p>
     <p>
-    This looks like a whole bunch of code, but lets break it down. So first we name our class (class Mathematics), after that we have these two lines "attr_reader" and "attr_accessor". All this does is tell us we have an instance variable (in attr_reader) that we can only access but cannot change, and another two variables stored as attr_accessor which allows us to access and change those variables. Before we go any further, let me tell you a bit about instance variables. All that means is that we can use this variable in more than just the method it's defined in. As we see above we use all the instance variables (the variables with the @ in front of the names) in more than one method. </p>
+    Wow, that looks like a whole bunch of code, let's break it down. So first we initialize, or start, the class with the variables we're going to be using. Now you'll notice these variables look a little different than one's we're used to dealing with, that's because these are instance variables. The '@' sign in front of the variable name denotes that it is an instance variable, and all that means is that you can call that variable in any method within the class. Although simply declaring a variable an instance variable does not mean we can call it whenever we want, we also have to make an instance method. What this does is allow us to call our instance variable, and each instance method are the methods above with only an instance variable within the method. Below is our initialize method: </p>
 
     <p class = 'code'><code>
-        def initialize
-          @first_word = 'Hello'
-        end
+class All_about_you
+  def initialize 
+    @name = 'John'
+    @age = 27
+    @city = 'Brooklyn'
+    @fav_food = 'pizza'
+  end
     </code></p>
     <p>
-    Now lets move on, the initialize method (which when you start making your own I guarantee you will misspell initialize more times than you can count) just tells us what our class is starting with. So we start with a variable that is defined and stores 'Hello' for us to use again. 
+    Now here we have an example of an instance method. This allows us to call our instance variable as a method, which can be very useful as you will see below.
    </p>
    <p class = 'code'><code>
-        def sum(a,b)
-          @first_number = a
-          @second_number = b
-          return a+b
-        end
+  def name
+    @name
+  end
     </code></p>
     <p>
-    
-    Next up we have our sum method. All we do here is say our first_number instance variable is equal to a, and our second_number instance variable is equal to b, and then we return the sum of them. Also, our subtract method does the exact same thing, only with subtraction instead of addition. Obviously we can do this in a much simpler way in Ruby, but here I wanted to give you simple examples so you can see how they work.</p>
-    <p>
-    
-    Finally, how do we use all this? That's the easy part, let's look below:</p>
+    Next up we have a few methods that can change our variables. Let's say you have a birthday, move cities (though I live in the best city there is, so why move?), or discover a new favorite food, we want our code to be able to adapt and change to our changing lives. Below is an example of a simple way to change our age:</p>
     <p class = 'code'><code>
-      >> example = Mathematics.new
-      >> p example.greet('John')
-      >> "Hello John! How are you today? Call the sum or subtract method with the two numbers you with to perform the operations on"
-      >> p example.sum(6,2)
-      >> 8
-      >> p example.subtract(6,2)
-      >> 4
+  def age_change(new_age)
+    @age = new_age
+  end
+    </code></p>  
+
+    <p>
+    See, not too difficult. Now as you look through the rest of the code above you should be able to see all the instance variables and methods we used, as well as the methods we use to change the value of our variables. As you progress a bit further you will learn a few simpler ways to store this information using accessor attributes, but for now this style of coding will suffice.
+    </p>
+    <p>
+    Finally, how do we put all this information to use? How do we see what our variables are? How do we make changes? This is where the ease of using classes really shines through. Rather than having to re-write and re-assign our variables every time we make a change, we can use our methods that we defined in our class. Let's take a look below to see how this all comes together:
+    </p>  
+    <p class = 'code'><code>
+      >> example = All_about_you.new
+      >> p example.name
+      >> 'John'
+      >>
+      >> p example.age
+      >> 27
+      >> p example.age_change(28)
+      >> 28
+      >>
+      >> p example.city
+      >> 'Brooklyn'
+      >> p example.city_change('San Francisco')
+      >> 'San Francisco'
+      >>
+      >> p example.fav_food
+      >> 'Pizza'
+      >> p example.change_food('Sushi')
+      >> 'Sushi'
     </code></p>
     <p>
-    So here we use our initialize (in the form of Mathematics.new) to start our class, and say we will be using it in our variable 'example'. Then we call the method greet (from the class Mathematics) with a name in order for it to print our greeting and instructions. Then we call the methods add and subtract with two numbers (6 and 2) and they print out the sum and difference of them.
-    We can see how classes work with a very simple function (that we can easily make much simpler through some refactoring), but hopefully you can see how to extrapolate with class use from here. There are so many applications of classes, try and make some of your own to find out!</p>
+    So here we start a new instance of our class using All_about_you.new and storing it in example. From here we can call all our methods we defined in our class on example and our results are printed to the console. If you look, after we call our methods, we use our change methods in order to change the value that we initially stored, making our code very flexible and adaptable. Hopefully this cleared up any questions you had about classes and how they work!
+    </p>
    
   </article>
 
