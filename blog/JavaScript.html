@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog</title>
+        <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+        <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One|Josefin+Slab|Nixie+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Abel|Signika|Maven+Pro' rel='stylesheet' type='text/css'>
+
+</head>
+
+<header>
+  </h2>John Maguire's Technical Blog</h2>
+</header>
+
+<body>
+   <aside>
+    <a href="http://jm96441n.github.io/index.html">
+      <div class="links">
+        Home  
+      </div>
+    </a>
+    <a href="http://jm96441n.github.io/blog/git.html">
+      <div class="links">
+        Version Control System  
+      </div>
+    </a>
+    <a href="http://jm96441n.github.io/blog/css-concepts.html">
+      <div class="links">
+        CSS Concepts 
+      </div></a> 
+    <a href="http://jm96441n.github.io/blog/array-hashes.html">
+      <div class="links">
+        Array's & Hashes</a>              
+      </div>
+    </a>
+    <a href="http://jm96441n.github.io/blog/enumerable-methods.html">
+      <div class="links">
+        Enumerable Methods            
+      </div>
+    </a> 
+    <a href="http://jm96441n.github.io/blog/ruby-classes.html"> 
+      <div class="links">
+        Ruby Classes            
+      </div>
+    </a>
+    <a href="http://jm96441n.github.io/blog/JavaScript.html">
+      <div class="links">
+        JavaScript vs Ruby            
+      </div>
+    </a>
+    <a href="http://jm96441n.github.io/blog/git.html"> 
+      <div class="links">
+        Blog-7             
+      </div>
+    </a> 
+  </aside>
+     
+  <article>
+    <section>
+      <h2> JavaScript vs Ruby </h2>
+    </section>
+    <p class = 'scrollbox'>
+      This past week has been spent working on a new language, JavaScript. In many ways JavaScript and Ruby are very similar, but deep down they are very different. Today we will be looking at one of the differences, and that is how you loop in each language. Let's look at some of the way's we have to loop in each language, and then compare them. First off let's look at Ruby:
+      <span class = 'code'>
+        .each
+        .each_index
+        .each_slice
+        .each_key
+        .each_value
+        for __ in ___
+        loop do
+        while
+        .times
+      </span>
+      These are just some of the major way's of looping in Ruby. Most of them use <span class = 'methodname'> each </span> in some way. The way that these behave is by going through each element (or index, slice, etc whichever the loop specifies) in the span you're looping through. Let's look at some of the ways JavaScript uses:
+      <span class = 'code'>
+        for (var __ = __; [condition]; [incrementExpression])
+            statement
+        
+
+        do
+          statement
+          while (condition);
+        
+
+        while(condition)
+          statement  
+      </span>
+      So as we see with JavaScript loops, generally rely on using counter variables, or setting conditions for the loop to run for until it completes the condition. As you can see a big difference between the two is in the way they loop. Both can perform the same loops, but in different matters. For example, let's say we have an array of numbers that we want to find the sum of. In Ruby we would iterate through each element and add them together, whereas in JavaScript we would use a for loop to iterate through the indexes and then add them all together. Let's see that in action:
+      <span class = 'code'>
+        RUBY:
+        array = [1,2,3,4,5,6]
+        sum = 0
+        array.each{|num| 
+          sum+= num
+          }
+        return sum
+        end
+
+        JAVASCRIPT:
+        var array = [1,2,3,4,5,6];
+        var sum = 0;
+        for (var i = 0; i <= array.length; i++){
+        sum += array[i];
+        };
+        return sum;
+      </span>
+      If we run this code, we will get the same answer, but if you look at the way the languages handle the loop you will see they go about it in different ways.
+    </p>
+  </article>
+
+   
+</body>
+
+<footer>
+  Copyright&copy 2016 John Maguire
+</footer>
+</html>
