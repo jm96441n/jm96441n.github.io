@@ -60,9 +60,9 @@
     <section>
       <h2> Ruby Classes </h2>
     </section>
-    <p>Today we will be discussing Ruby Classes. A class is an object in Ruby which allows us to store and define methods that we can re-use without having to redefine each method. Now, that sounds much more intricate and difficult than it actually is. The easiest way to show you this is with a simple, real-world example. Let's write a class that will store your name, age, favorite food, and city you currently live. that we can show on command, but we can change if we need to.
-    </p>
-    <p class="code"><code>
+    <p class = "scrollbox">Today we will be discussing Ruby Classes. A class is an object in Ruby which allows us to store and define methods that we can re-use without having to redefine each method. Now, that sounds much more intricate and difficult than it actually is. The easiest way to show you this is with a simple, real-world example. Let's write a class that will store your name, age, favorite food, and city you currently live. that we can show on command, but we can change if we need to.
+    
+    <span class='code'>
 class All_about_you
   def initialize 
     @name = 'John'
@@ -91,11 +91,11 @@ class All_about_you
   def change_food(new_fav)
     @fav_food = new_fav
   end
-end    </code></p>
-    <p>
-    Wow, that looks like a whole bunch of code, let's break it down. So first we initialize, or start, the class with the variables we're going to be using. Now you'll notice these variables look a little different than one's we're used to dealing with, that's because these are instance variables. The '@' sign in front of the variable name denotes that it is an instance variable, and all that means is that you can call that variable in any method within the class. Although simply declaring a variable an instance variable does not mean we can call it whenever we want, we also have to make an instance method. What this does is allow us to call our instance variable, and each instance method are the methods above with only an instance variable within the method. Below is our initialize method: </p>
+end    </span>
+    
+    Wow, that looks like a whole bunch of code, let's break it down. So first we initialize, or start, the class with the variables we're going to be using. Now you'll notice these variables look a little different than one's we're used to dealing with, that's because these are instance variables. The '@' sign in front of the variable name denotes that it is an instance variable, and all that means is that you can call that variable in any method within the class. Although simply declaring a variable an instance variable does not mean we can call it whenever we want, we also have to make an instance method. What this does is allow us to call our instance variable, and each instance method are the methods above with only an instance variable within the method. Below is our initialize method: 
 
-    <p class = 'code'><code>
+    <span class='code'>
 class All_about_you
   def initialize 
     @name = 'John'
@@ -103,30 +103,30 @@ class All_about_you
     @city = 'Brooklyn'
     @fav_food = 'pizza'
   end
-    </code></p>
-    <p>
+    </span>
+    
     Now here we have an example of an instance method. This allows us to call our instance variable as a method, which can be very useful as you will see below.
-   </p>
-   <p class = 'code'><code>
+   
+   <span class='code'>
   def name
     @name
   end
-    </code></p>
-    <p>
-    Next up we have a few methods that can change our variables. Let's say you have a birthday, move cities (though I live in the best city there is, so why move?), or discover a new favorite food, we want our code to be able to adapt and change to our changing lives. Below is an example of a simple way to change our age:</p>
-    <p class = 'code'><code>
+    </span>
+    
+    Next up we have a few methods that can change our variables. Let's say you have a birthday, move cities (though I live in the best city there is, so why move?), or discover a new favorite food, we want our code to be able to adapt and change to our changing lives. Below is an example of a simple way to change our age:
+    <span class='code'>
   def age_change(new_age)
     @age = new_age
   end
-    </code></p>  
+    </span>  
 
-    <p>
+    
     See, not too difficult. Now as you look through the rest of the code above you should be able to see all the instance variables and methods we used, as well as the methods we use to change the value of our variables. As you progress a bit further you will learn a few simpler ways to store this information using accessor attributes, but for now this style of coding will suffice.
-    </p>
-    <p>
+    
+    
     Finally, how do we put all this information to use? How do we see what our variables are? How do we make changes? This is where the ease of using classes really shines through. Rather than having to re-write and re-assign our variables every time we make a change, we can use our methods that we defined in our class. Let's take a look below to see how this all comes together:
-    </p>  
-    <p class = 'code'><code>
+     
+    <span class='code'>
       >> example = All_about_you.new
       >> p example.name
       >> 'John'
@@ -145,11 +145,10 @@ class All_about_you
       >> 'Pizza'
       >> p example.change_food('Sushi')
       >> 'Sushi'
-    </code></p>
-    <p>
+    </span>
+    
     So here we start a new instance of our class using All_about_you.new and storing it in example. From here we can call all our methods we defined in our class on example and our results are printed to the console. If you look, after we call our methods, we use our change methods in order to change the value that we initially stored, making our code very flexible and adaptable. Hopefully this cleared up any questions you had about classes and how they work!
     </p>
-   
   </article>
 
    

@@ -34,6 +34,15 @@ header div h1 {
 	color: black;
 }
 
+section {
+	text-align: center;
+}
+
+section img {
+	width:20em;
+}
+}
+
 nav {
 	clear: both;
 	text-align: center;
@@ -56,6 +65,11 @@ nav {
 	background-color: #D8FFFF;
 	color: gray;
 
+}
+
+section div h5 {
+	text-align: center;
+	font-family: Josefin Slab;
 }
 
 section div h3 {
