@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog</title>
+        <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+        <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One|Josefin+Slab|Nixie+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Abel|Signika|Maven+Pro' rel='stylesheet' type='text/css'>
+
+</head>
+
+<header>
+    
+</h2>John Maguire's Technical Blog</h2>
+</header>
+
+
+<body>
+  <aside>
+    <a href="http://jm96441n.github.io/index.html">
+      <div class="links">
+        Home  
+      </div>
+    </a>
+    <a href="http://jm96441n.github.io/blog/git.html">
+      <div class="links">
+        Version Control System  
+      </div>
+    </a>
+    <a href="http://jm96441n.github.io/blog/css-concepts.html">
+      <div class="links">
+        CSS Concepts 
+      </div></a> 
+    <a href="http://jm96441n.github.io/blog/array-hashes.html">
+      <div class="links">
+        Array's & Hashes</a>              
+      </div>
+    </a>
+    <a href="http://jm96441n.github.io/blog/enumerable-methods.html">
+      <div class="links">
+        Enumerable Methods            
+      </div>
+    </a> 
+    <a href="http://jm96441n.github.io/blog/ruby-classes.html"> 
+      <div class="links">
+        Ruby Classes            
+      </div>
+    </a>
+    <a href="http://jm96441n.github.io/blog/JavaScript.html">
+      <div class="links">
+        JavaScript vs Ruby            
+      </div>
+    </a>
+    <a href="http://jm96441n.github.io/blog/tech.html"> 
+      <div class="links">
+        Regular Expressions             
+      </div>
+    </a> 
+  </aside>
+     
+    <article>
+      <section>
+        <h2> Regular Expressions </h2>
+    </section>
+      <p class = "scrollbox_blog"> In today's blog we will be talking about Regular Expressions and how they are used. At their core, Regular Expressions are terms that are used to define a search. That may seem a little overwhelming, but let's look at a regular expression and break it down so we can see how they are used. Let's look at one that will determine if a users input is a valid email.
+      
+      <span class="var">var emailRegExp =</span>  <span class = "regexp">/[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}/;</span>
+
+      If we use this to test the user's input, we would use 
+
+      <span class="var_name">emailRegExp.test(user_input)</span>
+
+    With a little more code we can have the program output whether the user input is a valid email. Let's break down the Regular Expression and see exactly what it is doing. 
+      <span class="regexp"> /^[a-z0-9._-] </span>
+      This part of the expression tells us that we are looking for any letter a to z, any number 0 to 9, a dot, an underscore, or a hyphen. The "^" tells us to start from the beginning of the string, and then it will check that each character is one of the characters that we are searching for. If it is anything other than one of those characters above, the test will return false. This is looking for the first part of an email address, for example in my e-mail address "jmaguire5588@gmail.com", this part of the code would check the "jmaguire5588" Now the next part of our expression:
+      <span class ="regexp"> +@[a-z0-9.-] </span>
+      Now we should recognize part of this code from the previous example, but let's start at the beginning of this piece. The "+@" here is used as a connector, saying that we should continue to the next part of our expression when we get to the "@" character in the string we are searching through. Next is the familiar part the <span class="regexp">[a-z0-9.-]</span>, which tells the expression to search for any characters a to z, 0 to 9, a dot, or a hyphen. This piece is checking the "@gmail" part of an email address to be correct.
+      <span class="regexp"> \.[a-z]{2,4}/</span>
+      This final part of our regular expression tells us a few things. The first part "\." tells us we are looking for a dot. There are other uses for the "." in Regular Expressions that do not necessarily mean a dot, the "\" before the "." tells us we are looking for the "." character. After that we have the <span class="regexp">[a-z]</span> that tells us that we are once again looking for the letters a to z, but the next part <span class="regexp">{2,4}</span> tells us that this part will only be 3 characters long (technically more than 2, but less than 4 which is 3). This part is checking the ".com" part of an email address. If we put this together it will check to see if we have a valid email address being input.
+
+      Now this is not the only example of how to use regular expressions, they have a myriad of uses, hopefully this example has helped you to understand how they work and what they can be used for.
+
+      </p>
+  </article>
+   
+</body>
+
+
+<footer>
+  Copyright&copy 2016 John Maguire
+</footer>
+</html>

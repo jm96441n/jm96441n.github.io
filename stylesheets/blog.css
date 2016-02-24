@@ -24,7 +24,7 @@ article p img  {
 	padding: 1em;
 }
 
-.scrollbox {
+.scrollbox_blog {
 	overflow-y: scroll;
 	height: 30em;
 }
@@ -42,6 +42,17 @@ article {
 	
 }
 
+.var{
+	color: blue;
+}
+
+.var_name{
+	color: blue;
+}
+
+.regexp {
+	color: red;
+}
 
 article p{
 	background-color: rgba(216, 255, 255, 0.55);
