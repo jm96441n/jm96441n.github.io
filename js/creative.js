@@ -44,7 +44,11 @@
 
     $('.container').on('click','.resume-link', function(e){
         e.preventDefault();
-        $('.resume').css('display', 'block')
+        if($('.resume').css('display') == 'none'){
+            $('.resume').css('display', 'block')
+        }else if($('.resume').css('display') == 'block'){
+            $('.resume').css('display', 'none')
+        };
 
     })
 
