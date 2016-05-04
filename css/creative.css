@@ -126,6 +126,13 @@ aside {
         display: none;
         margin-left: 15%;
     }
+
+    .coming_soon {
+        margin: auto;
+        margin-top: 15%;
+        text-align: center;
+    }
+
     .navbar-default {
         border-color: rgba(255,255,255,.3);
         background-color: transparent;
