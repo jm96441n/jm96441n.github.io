@@ -42,6 +42,12 @@
         }
     })
 
+    $('.container').on('click','.resume-link', function(e){
+        e.preventDefault();
+        $('.resume').css('display', 'block')
+
+    })
+
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 

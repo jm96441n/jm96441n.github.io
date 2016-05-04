@@ -122,6 +122,10 @@ aside {
 }
 
 @media(min-width:768px) {
+    .resume {
+        display: none;
+        margin-left: 15%;
+    }
     .navbar-default {
         border-color: rgba(255,255,255,.3);
         background-color: transparent;
@@ -474,3 +478,4 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
